@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nombre": "Playa",
+    "descripcion": "Paquetes con destino a costas y balnearios.",
+    "icono": "fa-umbrella-beach"
+  },
+  {
+    "id": 2,
+    "nombre": "Montaña",
+    "descripcion": "Rutas hacia zonas andinas y de altura.",
+    "icono": "fa-mountain"
+  },
+  {
+    "id": 3,
+    "nombre": "Aventura",
+    "descripcion": "Actividades de turismo de aventura y deportes extremos.",
+    "icono": "fa-person-hiking"
+  },
+  {
+    "id": 4,
+    "nombre": "Cultural",
+    "descripcion": "Recorridos históricos, patrimoniales y gastronómicos.",
+    "icono": "fa-landmark"
+  },
+  {
+    "id": 5,
+    "nombre": "Crucero",
+    "descripcion": "Travesías marítimas y fluviales.",
+    "icono": "fa-ship"
+  },
+  {
+    "id": 6,
+    "nombre": "Todo Incluido",
+    "descripcion": "Paquetes con hospedaje, alimentación y traslados incluidos.",
+    "icono": "fa-suitcase-rolling"
+  },
+  {
+    "id": 7,
+    "nombre": "Luna de Miel",
+    "descripcion": "Experiencias diseñadas para parejas.",
+    "icono": "fa-heart"
+  },
+  {
+    "id": 8,
+    "nombre": "Familiar",
+    "descripcion": "Planes pensados para viajar en grupo familiar.",
+    "icono": "fa-people-roof"
+  },
+  {
+    "id": 9,
+    "nombre": "Ecoturismo",
+    "descripcion": "Turismo responsable en reservas naturales.",
+    "icono": "fa-leaf"
+  },
+  {
+    "id": 10,
+    "nombre": "Internacional",
+    "descripcion": "Destinos fuera de Ecuador.",
+    "icono": "fa-earth-americas"
+  }
+]
