@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto · ViajaYa</title>
+<link rel="stylesheet" href="../css/general.css">
+<link rel="stylesheet" href="../css/componentes.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="../index.html" class="marca"><span class="sello">VY</span> ViajaYa</a>
+    <button class="nav-toggle" id="botonMenu" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav-principal" id="menuPrincipal">
+      <a href="../index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="registro.html">Registro</a>
+      <a href="clima.html">Clima de salida</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="seccion">
+    <div class="contenedor">
+      <span class="eyebrow">Hablemos</span>
+      <h1 class="texto-centro">Contáctanos</h1>
+      <p class="texto-centro">¿Tienes dudas sobre un paquete o deseas una cotización personalizada? Escríbenos.</p>
+
+      <form id="formularioContacto" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nombreContacto">Nombre completo</label>
+          <input type="text" id="nombreContacto" name="nombre" required>
+          <small class="error">Ingrese al menos 2 caracteres.</small>
+        </div>
+        <div class="campo">
+          <label for="correoContacto">Correo electrónico</label>
+          <input type="email" id="correoContacto" name="correo" required>
+          <small class="error">Ingrese un correo válido.</small>
+        </div>
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto">
+            <option value="cotizacion">Solicitar cotización</option>
+            <option value="reserva">Consultar una reserva</option>
+            <option value="soporte">Soporte general</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          <small class="error">Ingrese al menos 10 caracteres.</small>
+        </div>
+        <button type="submit" class="boton boton--coral" style="width:100%; justify-content:center;">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <div><h4>ViajaYa</h4><p>Proyecto integrador · Fundamentos Web · ESPE</p></div>
+    <div><h4>Enlaces</h4><p><a href="../index.html">Inicio</a></p><p><a href="catalogo.html">Catálogo</a></p></div>
+    <div><h4>Contacto</h4><p>contacto@viajaya.ec</p></div>
+  </div>
+  <p class="pie-legal">© 2026 ViajaYa · Proyecto académico sin fines comerciales</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/storage.js"></script>
+<script src="../js/datos.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="../js/componentes.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

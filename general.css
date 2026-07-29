@@ -1,0 +1,215 @@
+/* ============================================================
+   ViajaYa · Hoja de estilos general
+   Paleta:  --tinta (#0E3B36) --arena (#FBF3E7) --coral (#E4572E)
+            --cielo (#3D7A8C) --texto (#1B2521) --blanco (#FFFFFF)
+   Tipografía: Fraunces (display) / Inter (texto) / JetBrains Mono (datos)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --tinta: #0d0e0d;
+  --tinta-suave: #f7d8b4;
+  --arena: #FBF3E7;
+  --arena-osc: #EFE3CE;
+  --coral: #E4572E;
+  --coral-osc: #C7451F;
+  --cielo: #3D7A8C;
+  --texto: #1B2521;
+  --blanco: #FFFFFF;
+  --exito: #2E7D5B;
+  --alerta: #B23A2E;
+
+  --fuente-display: 'Fraunces', serif;
+  --fuente-texto: 'Inter', sans-serif;
+  --fuente-datos: 'JetBrains Mono', monospace;
+
+  --radio: 14px;
+  --sombra: 0 10px 30px -12px rgba(14, 59, 54, 0.35);
+  --borde-perforado: repeating-linear-gradient(to right, var(--arena-osc) 0 8px, transparent 8px 16px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  color: var(--texto);
+  background: var(--arena);
+  line-height: 1.55;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-display);
+  color: var(--tinta);
+  margin: 0 0 .5rem;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2.1rem, 4vw, 3.4rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--cielo); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.contenedor {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.seccion { padding: 3.5rem 0; }
+.seccion--tinta { background: var(--tinta); color: var(--arena); }
+.seccion--tinta h2, .seccion--tinta h3 { color: var(--arena); }
+
+.eyebrow {
+  font-family: var(--fuente-datos);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  color: var(--coral);
+  display: inline-block;
+  margin-bottom: .6rem;
+}
+
+/* ---------- Encabezado / navegación ---------- */
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--tinta);
+  border-bottom: 3px dashed var(--coral);
+}
+
+.encabezado .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .9rem 0;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: var(--fuente-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--arena);
+}
+.marca .sello {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--coral);
+  display: grid; place-items: center;
+  color: var(--blanco);
+  font-family: var(--fuente-datos);
+  font-size: .9rem;
+  transform: rotate(-8deg);
+}
+
+.nav-principal { display: flex; gap: 1.6rem; }
+.nav-principal a {
+  color: var(--arena);
+  font-weight: 500;
+  font-size: .95rem;
+  opacity: .85;
+}
+.nav-principal a.activo, .nav-principal a:hover { opacity: 1; color: var(--coral); text-decoration: none; }
+
+.nav-toggle { display: none; }
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border: none;
+  border-radius: 999px;
+  padding: .7rem 1.4rem;
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: .92rem;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.boton:hover { transform: translateY(-2px); text-decoration: none; }
+.boton--coral { background: var(--coral); color: var(--blanco); }
+.boton--coral:hover { background: var(--coral-osc); }
+.boton--linea { background: transparent; border: 1.5px solid var(--tinta); color: var(--tinta); }
+.boton--claro { background: var(--arena); color: var(--tinta); }
+.boton--peq { padding: .4rem .85rem; font-size: .8rem; border-radius: 8px; }
+.boton--alerta { background: var(--alerta); color: var(--blanco); }
+.boton:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+/* ---------- Pie de página ---------- */
+.pie {
+  background: var(--tinta);
+  color: var(--arena);
+  padding: 2.5rem 0 1.2rem;
+  margin-top: 3rem;
+}
+.pie .contenedor {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+}
+.pie h4 { color: var(--arena); font-family: var(--fuente-texto); font-size: .95rem; text-transform: uppercase; letter-spacing: .08em;}
+.pie a { color: var(--arena); opacity: .8; }
+.pie-legal {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(251,243,231,.15);
+  font-size: .8rem;
+  opacity: .7;
+  font-family: var(--fuente-datos);
+}
+
+/* ---------- Utilidades ---------- */
+.oculto { display: none !important; }
+.texto-centro { text-align: center; }
+.mensaje-vacio {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--tinta-suave);
+  font-style: italic;
+  border: 2px dashed var(--arena-osc);
+  border-radius: var(--radio);
+}
+.badge {
+  font-family: var(--fuente-datos);
+  font-size: .72rem;
+  padding: .2rem .55rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.badge--disponible { background: #E1F2E8; color: var(--exito); }
+.badge--agotado { background: #F6DEDA; color: var(--alerta); }
+
+.spinner {
+  width: 34px; height: 34px;
+  border: 4px solid var(--arena-osc);
+  border-top-color: var(--coral);
+  border-radius: 50%;
+  margin: 2rem auto;
+  animation: girar 0.8s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--coral); color: white; padding: .6rem 1rem; z-index: 100;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+:focus-visible { outline: 3px solid var(--cielo); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
